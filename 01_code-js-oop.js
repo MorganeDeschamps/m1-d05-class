@@ -2,6 +2,31 @@
  * Code along for the lesson on JS Objects methods
  */
 
+// The class syntax
+class Order {
+  constructor(customer, beverage, price, sugar, extraFoam) {
+    this.customer = customer;
+    this.beverage = beverage;
+    this.price = price;
+    this.sugar = sugar;
+    this.extraFoam = extraFoam;
+  }
+
+  callCustomer(barista) {
+    console.log(
+      `${barista} says: "Hey ${this.customer} your order of ${this.beverage} is ready!"`
+    );
+  }
+}
+
+const order1 = new Order("Ironhack", "cappucino", 10, false, true);
+
+const order2 = new Order("Marco", "cappucino", 10, false, true);
+
+order1.callCustomer("Miki");
+order2.callCustomer("Danny");
+
+/*
 // The reason why we need classes
 
 const order1 = {
@@ -10,6 +35,7 @@ const order1 = {
   price: 10,
   sugar: false,
   extraFoam: true,
+
   callCustomer: function (barista) {
     console.log(
       `${barista} says: "Hey ${this.customer} your cappucino is ready!"` // THis string is what was originally written
@@ -23,6 +49,7 @@ const order2 = {
   price: 10,
   sugar: false,
   extraFoam: true,
+
   callCustomer: function (barista) {
     console.log(`${barista} says: "Hey ${customer} your order is ready!"`); // This string is changed by hand
   },
@@ -30,6 +57,7 @@ const order2 = {
 
 order1.callCustomer("Miki"); // This is lame, doesn't solve the problem
 order2.callCustomer("Danny"); // This is lame, doesn't solve the problem
+*/
 
 /*
 // From the losson about objects -> The reason for objects

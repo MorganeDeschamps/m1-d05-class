@@ -2,18 +2,34 @@
  * Code along for the lesson on JS Objects methods
  */
 
+// The reason why we need classes
+
 const order1 = {
   customer: "Ironhack",
   beverage: "cappucino",
   price: 10,
   sugar: false,
   extraFoam: true,
-  callCustomer: function (barista, customer) {
-    console.log(`${barista} says: "Hey ${customer} your cappucino is ready!"`);
+  callCustomer: function (barista) {
+    console.log(
+      `${barista} says: "Hey ${this.customer} your cappucino is ready!"` // THis string is what was originally written
+    );
   },
 };
 
-order1.callCustomer("Miki", "Ironhack"); // This is lame, doesn't solve the problem
+const order2 = {
+  customer: "Marco",
+  beverage: "cappucino",
+  price: 10,
+  sugar: false,
+  extraFoam: true,
+  callCustomer: function (barista) {
+    console.log(`${barista} says: "Hey ${customer} your order is ready!"`); // This string is changed by hand
+  },
+};
+
+order1.callCustomer("Miki"); // This is lame, doesn't solve the problem
+order2.callCustomer("Danny"); // This is lame, doesn't solve the problem
 
 /*
 // From the losson about objects -> The reason for objects

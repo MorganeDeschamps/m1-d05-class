@@ -26,13 +26,22 @@ class OrderToDeliver extends Order {
   }
   baristaCallCustomer(barista) {
     console.log(
-      `${barista} says: "Hey ${this.customer} your order TO GO of ${this.beverage} is ready!"`
+      `${barista} says: "Hey ${this.customer} your order TO DELIVER of ${this.beverage} is ready!"`
     );
   }
 }
 
 class OrderToGo extends Order {
-  //constructor() {}
+  baristaCallCustomer(barista) {
+    console.log(
+      `${barista} says: "Hey ${this.customer} your order TO GO of ${this.beverage} is ready!"`
+    );
+  }
+  ringCustomer() {
+    console.log(
+      `"Hello ${this.customer} pleae come pick up your order TO GO of ${this.beverage} is ready!"`
+    );
+  }
 }
 
 const orderToDeliver = new OrderToDeliver(

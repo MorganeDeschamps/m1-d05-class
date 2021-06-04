@@ -8,12 +8,12 @@ const order1 = {
   price: 10,
   sugar: false,
   extraFoam: true,
-  callCustomer: function (barista) {
-    console.log(`${barista} says: "Hey customer your cappucino is ready!"`);
+  callCustomer: function (barista, customer) {
+    console.log(`${barista} says: "Hey ${customer} your cappucino is ready!"`);
   },
 };
 
-order1.callCustomer("Miki"); //We shouldn't call this a function, now it's a method.
+order1.callCustomer("Miki", "Ironhack"); // This is lame, doesn't solve the problem
 
 /*
 // From the losson about objects -> The reason for objects

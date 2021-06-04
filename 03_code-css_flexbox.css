@@ -1,4 +1,33 @@
 div {
-    height: 150px;
-    width: 150px;
+  height: 150px;
+  width: 150px;
+}
+
+.container {
+  background-color: #222222;
+  height: 500px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-flow: column;
+}
+
+div {
+  display: flex;
+  align-items: top;
+  justify-content: flex-end;
+}
+
+div > p {
+  font-size: 2rem;
+}
+
+.div-3 {
+  order: 2;
+}
+
+.div-4 {
+  order: -1;
 }

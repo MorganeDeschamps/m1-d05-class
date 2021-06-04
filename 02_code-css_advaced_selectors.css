@@ -1,7 +1,44 @@
+:root {
+  margin-left: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border: 1px solid orange;
+}
+
 li {
   font-size: 2rem;
 }
 
 .student-name {
   color: red;
+}
+
+ul > li {
+  color: black;
+}
+
+ol em {
+  color: orange;
+}
+
+ul em {
+  color: green;
+}
+
+ol > ul > li {
+  color: blue;
+}
+
+.aleix {
+  text-transform: uppercase;
+  color: black;
+}
+
+.aleix + li {
+  text-transform: uppercase;
+}
+
+.aleix:hover,
+.aleix + li:hover {
+  font-size: 4rem;
+  background-color: yellow;
 }

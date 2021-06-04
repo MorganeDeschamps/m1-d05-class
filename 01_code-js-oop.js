@@ -12,7 +12,7 @@ class Order {
     this.extraFoam = extraFoam;
   }
 
-  callCustomer(barista) {
+  baristaCallCustomer(barista) {
     console.log(
       `${barista} says: "Hey ${this.customer} your order of ${this.beverage} is ready!"`
     );
@@ -23,8 +23,11 @@ const order1 = new Order("Ironhack", "cappucino", 10, false, true);
 
 const order2 = new Order("Marco", "cappucino", 10, false, true);
 
-order1.callCustomer("Miki");
-order2.callCustomer("Danny");
+const order3 = new Order("Fede", "espresso", 8, true, false);
+
+order1.baristaCallCustomer("Miki");
+order2.baristaCallCustomer("Danny");
+order3.baristaCallCustomer("John");
 
 /*
 // The reason why we need classes
